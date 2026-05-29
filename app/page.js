@@ -1,65 +1,96 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useState } from "react";
+import { BsArrowLeft } from "react-icons/bs";
+
+export default function PaymentRequestUI() {
+  const [name, setName] = useState("Chetan Sharma");
+  const [upiId, setUpiId] = useState("8529112775@ikwik");
+
+  // initials generate
+  const initials = name
+    .split(" ")
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
+    <div className="min-h-screen w-full bg-[#efefef] font-sans overflow-y-auto">
+      
+      {/* Back Arrow */}
+      <div className="pt-5 pl-6">
+        <button>
+          <BsArrowLeft className="text-[#3d3d3d] text-[34px]" />
+        </button>
+      </div>
+
+      {/* Card Wrapper */}
+      <div className="flex justify-center mt-[300px] px-5">
+        
+        <div className="relative w-full max-w-[760px] bg-[#f8f8f8] rounded-[28px] px-5 pt-[62px] pb-5">
+          
+          {/* Top Circle */}
+          <div className="absolute left-1/2 -translate-x-1/2 -top-[40px]">
+            <div className="w-[82px] h-[82px] rounded-full bg-[#eedcf2] border-[4px] border-[#ececec] flex items-center justify-center">
+              
+              <span className="text-[#91449d] text-[20px] font-[700] tracking-[0.5px]">
+                {initials}
+              </span>
+            </div>
+          </div>
+
+          {/* UPI ID */}
+          <h1 className="text-center text-[21px] leading-none font-[700] text-[#171717] break-all">
+            {upiId}
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+
+          {/* Business Box */}
+          <div className="mt-6 bg-[#eef2f6] rounded-[22px] py-5 px-4">
+            
+            <p className="text-center text-[14px] text-[#787878] font-[400] leading-none">
+              Business Name
+            </p>
+
+            <h2 className="text-center text-[18px] font-[700] text-[#1d1d1d] mt-3 leading-none break-words">
+              {name}
+            </h2>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+
+      {/* Bottom Text */}
+      <div className="px-8 mt-5 flex justify-center">
+        <p className="max-w-[760px] text-center text-[#3f3f3f] text-[11px] leading-[17px] font-[400]">
+          This merchant receives money through payment requests. To pay again,
+          please visit their app/website.
+        </p>
+      </div>
+
+      {/* Bottom Inputs */}
+      <div className="mt-[500px] px-5 pb-10">
+        
+        <div className="max-w-[760px] mx-auto flex flex-col gap-4">
+          
+          {/* Name Input */}
+          <input
+            type="text"
+            placeholder="Enter Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full h-[56px] rounded-[18px] px-5 text-[16px] font-[500] bg-white outline-none border border-[#dcdcdc]"
+          />
+
+          {/* UPI Input */}
+          <input
+            type="text"
+            placeholder="Enter UPI ID"
+            value={upiId}
+            onChange={(e) => setUpiId(e.target.value)}
+            className="w-full h-[56px] rounded-[18px] px-5 text-[16px] font-[500] bg-white outline-none border border-[#dcdcdc]"
+          />
         </div>
-      </main>
+      </div>
     </div>
   );
 }
