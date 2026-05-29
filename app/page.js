@@ -55,17 +55,17 @@ export default function PaymentRequestUI() {
           </h1>
 
           {/* Business Box */}
-          <div className="mt-3 bg-[#e1effc] rounded-[18px] py-3 px-4">
+          <div className="mt-3 bg-[#eef2f6] rounded-[18px] py-3 px-4">
             
             <p
-              className="text-center text-[16px] tracking-wide text-[#787878] font-[400] leading-none"
+              className="text-center text-[17px] tracking-wide text-[#787878] font-[600] leading-none"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Business Name
             </p>
 
             <h2
-              className="text-center tracking-wide text-[17px] font-[700] text-[#1d1d1d] mt-1 leading-none break-words"
+              className="text-center tracking-wide text-[18px] font-[700] text-[#1d1d1d] mt-1 leading-none break-words"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               {name}
@@ -77,7 +77,7 @@ export default function PaymentRequestUI() {
       {/* Bottom Text */}
       <div className="px-8 mt-3 flex justify-center">
         <p
-          className="max-w-[760px] text-center text-[#3f3f3f] text-[12px] leading-[15px] font-[500]"
+          className="max-w-[760px] text-center text-[#3f3f3f] text-[13px] leading-[15px] font-[500]"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
           This merchant receives money through payment requests. To pay again,
