@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { BsArrowLeft } from "react-icons/bs";
+import { GoArrowLeft } from "react-icons/go";
 
 export default function PaymentRequestUI() {
   const [name, setName] = useState("Chetan Sharma");
@@ -16,17 +16,17 @@ export default function PaymentRequestUI() {
     .toUpperCase();
 
   return (
-    <div className="min-h-screen w-full bg-[#efefef] font-sans overflow-y-auto">
+    <div className="min-h-screen w-full bg-[#efefef] overflow-y-auto font-['Poppins']">
       
       {/* Back Arrow */}
       <div className="pt-5 pl-6">
         <button>
-          <BsArrowLeft className="text-[#3d3d3d] text-[34px]" />
+          <GoArrowLeft className="text-[#3d3d3d] text-[27px]" />
         </button>
       </div>
 
       {/* Card Wrapper */}
-      <div className="flex justify-center mt-[300px] px-5">
+      <div className="flex justify-center mt-[270px] px-3">
         
         <div className="relative w-full max-w-[760px] bg-[#f8f8f8] rounded-[28px] px-5 pt-[62px] pb-5">
           
@@ -60,8 +60,8 @@ export default function PaymentRequestUI() {
       </div>
 
       {/* Bottom Text */}
-      <div className="px-8 mt-5 flex justify-center">
-        <p className="max-w-[760px] text-center text-[#3f3f3f] text-[11px] leading-[17px] font-[400]">
+      <div className="px-8 mt-3 flex justify-center">
+        <p className="max-w-[760px] text-center text-[#3f3f3f] text-[14px] leading-[17px] font-[500]">
           This merchant receives money through payment requests. To pay again,
           please visit their app/website.
         </p>
