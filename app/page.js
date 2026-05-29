@@ -31,7 +31,7 @@ export default function PaymentRequestUI() {
       {/* Card Wrapper */}
       <div className="flex justify-center mt-[270px] px-3">
         
-        <div className="relative w-full max-w-[760px] bg-[#f8f8f8] rounded-[28px] px-5 pt-[62px] pb-5">
+        <div className="relative w-full max-w-[760px] bg-[#f8f8f8] rounded-[18px] px-5 pt-[62px] pb-5">
           
           {/* Top Circle */}
           <div className="absolute left-1/2 -translate-x-1/2 -top-[40px]">
@@ -55,7 +55,7 @@ export default function PaymentRequestUI() {
           </h1>
 
           {/* Business Box */}
-          <div className="mt-3 bg-[#eef2f6] rounded-[22px] py-3 px-4">
+          <div className="mt-3 bg-[#e1effc] rounded-[18px] py-3 px-4">
             
             <p
               className="text-center text-[16px] tracking-wide text-[#787878] font-[400] leading-none"
@@ -77,7 +77,7 @@ export default function PaymentRequestUI() {
       {/* Bottom Text */}
       <div className="px-8 mt-3 flex justify-center">
         <p
-          className="max-w-[760px] text-center text-[#3f3f3f] text-[12px] leading-[17px] font-[500]"
+          className="max-w-[760px] text-center text-[#3f3f3f] text-[12px] leading-[15px] font-[500]"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
           This merchant receives money through payment requests. To pay again,
