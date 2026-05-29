@@ -16,7 +16,10 @@ export default function PaymentRequestUI() {
     .toUpperCase();
 
   return (
-    <div className="min-h-screen w-full bg-[#efefef] overflow-y-auto font-['Poppins']">
+    <div
+      className="min-h-screen w-full bg-[#efefef] overflow-y-auto"
+      style={{ fontFamily: "'Poppins', sans-serif" }}
+    >
       
       {/* Back Arrow */}
       <div className="pt-5 pl-6">
@@ -34,25 +37,37 @@ export default function PaymentRequestUI() {
           <div className="absolute left-1/2 -translate-x-1/2 -top-[40px]">
             <div className="w-[82px] h-[82px] rounded-full bg-[#eedcf2] border-[4px] border-[#ececec] flex items-center justify-center">
               
-              <span className="text-[#91449d] text-[20px] font-[700] tracking-[0.5px]">
+              <span
+                className="text-[#91449d] text-[20px] font-[700] tracking-[0.5px]"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
+              >
                 {initials}
               </span>
             </div>
           </div>
 
           {/* UPI ID */}
-          <h1 className="text-center text-[21px] leading-none font-[700] text-[#171717] break-all">
+          <h1
+            className="text-center text-[21px] leading-none font-[700] text-[#171717] break-all"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
             {upiId}
           </h1>
 
           {/* Business Box */}
-          <div className="mt-6 bg-[#eef2f6] rounded-[22px] py-5 px-4">
+          <div className="mt-3 bg-[#eef2f6] rounded-[22px] py-3 px-4">
             
-            <p className="text-center text-[14px] text-[#787878] font-[400] leading-none">
+            <p
+              className="text-center text-[18px] text-[#787878] font-[400] leading-none"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
               Business Name
             </p>
 
-            <h2 className="text-center text-[18px] font-[700] text-[#1d1d1d] mt-3 leading-none break-words">
+            <h2
+              className="text-center text-[18px] font-[700] text-[#1d1d1d] mt-2 leading-none break-words"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
               {name}
             </h2>
           </div>
@@ -61,7 +76,10 @@ export default function PaymentRequestUI() {
 
       {/* Bottom Text */}
       <div className="px-8 mt-3 flex justify-center">
-        <p className="max-w-[760px] text-center text-[#3f3f3f] text-[14px] leading-[17px] font-[500]">
+        <p
+          className="max-w-[760px] text-center text-[#3f3f3f] text-[14px] leading-[17px] font-[500]"
+          style={{ fontFamily: "'Poppins', sans-serif" }}
+        >
           This merchant receives money through payment requests. To pay again,
           please visit their app/website.
         </p>
@@ -78,6 +96,7 @@ export default function PaymentRequestUI() {
             placeholder="Enter Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            style={{ fontFamily: "'Poppins', sans-serif" }}
             className="w-full h-[56px] rounded-[18px] px-5 text-[16px] font-[500] bg-white outline-none border border-[#dcdcdc]"
           />
 
@@ -87,6 +106,7 @@ export default function PaymentRequestUI() {
             placeholder="Enter UPI ID"
             value={upiId}
             onChange={(e) => setUpiId(e.target.value)}
+            style={{ fontFamily: "'Poppins', sans-serif" }}
             className="w-full h-[56px] rounded-[18px] px-5 text-[16px] font-[500] bg-white outline-none border border-[#dcdcdc]"
           />
         </div>
