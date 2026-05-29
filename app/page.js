@@ -100,14 +100,14 @@ export default function PaymentRequestUI() {
           <div className="mt-3 bg-[#eef2f6] rounded-[18px] py-3 px-4">
             
             <p
-              className="text-center text-[17px] tracking-wide text-[#787878] font-[500] leading-none"
+              className="text-center text-[17px] tracking-wide text-[#787878] font-[400] leading-none"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Business Name
             </p>
 
             <h2
-              className="text-center tracking-wide text-[18px] font-[600] text-[#1d1d1d] mt-1 leading-none break-words"
+              className="text-center tracking-wide text-[18px] font-[500] text-[#1d1d1d] mt-1 leading-none break-words"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               {name}
