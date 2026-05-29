@@ -29,7 +29,7 @@ export default function PaymentRequestUI() {
       </div>
 
       {/* Card Wrapper */}
-      <div className="flex justify-center mt-[270px] px-3">
+      <div className="flex justify-center mt-[330px] px-3">
         
         <div className="relative w-full max-w-[760px] bg-[#f8f8f8] rounded-[18px] px-5 pt-[62px] pb-5">
           
@@ -58,14 +58,14 @@ export default function PaymentRequestUI() {
           <div className="mt-3 bg-[#eef2f6] rounded-[18px] py-3 px-4">
             
             <p
-              className="text-center text-[17px] tracking-wide text-[#787878] font-[600] leading-none"
+              className="text-center text-[17px] tracking-wide text-[#787878] font-[500] leading-none"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Business Name
             </p>
 
             <h2
-              className="text-center tracking-wide text-[18px] font-[700] text-[#1d1d1d] mt-1 leading-none break-words"
+              className="text-center tracking-wide text-[18px] font-[600] text-[#1d1d1d] mt-1 leading-none break-words"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               {name}
