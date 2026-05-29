@@ -1,11 +1,45 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 
 export default function PaymentRequestUI() {
   const [name, setName] = useState("Chetan Sharma");
   const [upiId, setUpiId] = useState("8529112775@ikwik");
+
+  // Random pastel background colors
+  const colors = [
+    "#eedcf2", // light purple
+    "#fff4cc", // light yellow
+    "#dff7df", // light green
+    "#ffdede", // light red
+    "#dff3ff", // light blue
+    "#ffe9d6", // peach
+  ];
+
+  const textColors = [
+    "#91449d",
+    "#c49b00",
+    "#2f9b57",
+    "#d14b4b",
+    "#3578c9",
+    "#d47b2f",
+  ];
+
+  const [bgColor, setBgColor] = useState(colors[0]);
+  const [textColor, setTextColor] = useState(textColors[0]);
+
+  // Change color automatically every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * colors.length);
+
+      setBgColor(colors[randomIndex]);
+      setTextColor(textColors[randomIndex]);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // initials generate
   const initials = name
@@ -22,7 +56,7 @@ export default function PaymentRequestUI() {
     >
       
       {/* Back Arrow */}
-      <div className="pt-14 px-3 ">
+      <div className="pt-14 px-3">
         <button>
           <GoArrowLeft className="text-[#3d3d3d] text-[27px]" />
         </button>
@@ -35,11 +69,19 @@ export default function PaymentRequestUI() {
           
           {/* Top Circle */}
           <div className="absolute left-1/2 -translate-x-1/2 -top-[40px]">
-            <div className="w-[82px] h-[82px] rounded-full bg-[#eedcf2] border-[4px] border-[#ececec] flex items-center justify-center">
+            <div
+              className="w-[82px] h-[82px] rounded-full border-[4px] border-[#ececec] flex items-center justify-center transition-all duration-700"
+              style={{
+                backgroundColor: bgColor,
+              }}
+            >
               
               <span
-                className="text-[#91449d] text-[20px] font-[700] tracking-[0.5px]"
-                style={{ fontFamily: "'Poppins', sans-serif" }}
+                className="text-[20px] font-[700] tracking-[0.5px] transition-all duration-700"
+                style={{
+                  color: textColor,
+                  fontFamily: "'Poppins', sans-serif",
+                }}
               >
                 {initials}
               </span>
