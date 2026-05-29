@@ -36,7 +36,7 @@ export default function PaymentRequestUI() {
 
       setBgColor(colors[randomIndex]);
       setTextColor(textColors[randomIndex]);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
