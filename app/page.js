@@ -22,7 +22,7 @@ export default function PaymentRequestUI() {
     >
       
       {/* Back Arrow */}
-      <div className="pt-11 px-3 ">
+      <div className="pt-14 px-3 ">
         <button>
           <GoArrowLeft className="text-[#3d3d3d] text-[27px]" />
         </button>
